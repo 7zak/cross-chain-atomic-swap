@@ -1,0 +1,66 @@
+{
+  "name": "cross-chain-atomic-swap",
+  "version": "1.0.0",
+  "description": "A comprehensive cross-chain atomic swap protocol with privacy features, multi-signature support, and mixing pools",
+  "main": "examples/basic-swap.js",
+  "scripts": {
+    "test": "clarinet test",
+    "check": "clarinet check",
+    "console": "clarinet console",
+    "integrate": "clarinet integrate",
+    "deploy:devnet": "clarinet integrate",
+    "deploy:testnet": "node deployments/deploy.ts testnet",
+    "deploy:mainnet": "node deployments/deploy.ts mainnet",
+    "example:basic": "node examples/basic-swap.js",
+    "lint": "eslint examples/ --ext .js,.ts",
+    "format": "prettier --write examples/ docs/ *.md"
+  },
+  "keywords": [
+    "atomic-swap",
+    "cross-chain",
+    "stacks",
+    "clarity",
+    "defi",
+    "privacy",
+    "blockchain",
+    "cryptocurrency",
+    "htlc",
+    "multi-signature"
+  ],
+  "author": {
+    "name": "Abdulrazak malik",
+    "email": "hexchange001@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7zak/cross-chain-atomic-swap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/7zak/cross-chain-atomic-swap/issues"
+  },
+  "homepage": "https://github.com/7zak/cross-chain-atomic-swap#readme",
+  "dependencies": {
+    "@stacks/transactions": "^6.0.0",
+    "@stacks/network": "^6.0.0",
+    "@stacks/common": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "clarinet": {
+    "version": "1.0.0",
+    "contracts": [
+      "contracts/atomic-swap.clar",
+      "contracts/test/atomic-swap-test.clar"
+    ]
+  }
+}
