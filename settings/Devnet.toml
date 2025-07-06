@@ -1,0 +1,47 @@
+[network]
+name = "devnet"
+node_rpc_address = "http://localhost:20443"
+deployment_fee_rate = 10
+
+[accounts.deployer]
+mnemonic = "twice kind fence tip hidden tilt action fragile skin nothing glory cousin green tomorrow spring wrist shed math olympic multiply hip blue scout claw"
+balance = 100_000_000_000_000
+
+[accounts.wallet_1]
+mnemonic = "sell invite acquire kitten bamboo drastic jelly vivid peace spawn twice guilt pave pen trash pretty park cube fragile unaware remain midnight betray rebuild"
+balance = 100_000_000_000_000
+
+[accounts.wallet_2]
+mnemonic = "hold excess usual excess ring elephant install account glad dry fragile donkey gaze humble truck breeze nation gasp vacuum limb head keep delay hospital"
+balance = 100_000_000_000_000
+
+[accounts.wallet_3]
+mnemonic = "board list obtain sugar hour worth raven scout denial thunder horse logic fury scorpion fold genuine phrase wealth news aim below celery when cabin"
+balance = 100_000_000_000_000
+
+[accounts.wallet_4]
+mnemonic = "hand inmate canvas head butter smile token tackle begin awful just fiber nexus depart fire salute outdoor normal tube spring usual february much inside"
+balance = 100_000_000_000_000
+
+[devnet]
+disable_stacks_explorer = false
+disable_stacks_api = false
+# bitcoin_controller_block_time = 30_000
+working_dir = "tmp/devnet"
+use_docker_gateway_routing = false
+
+[devnet.bitcoin_controller]
+username = "devnet"
+password = "devnet"
+rpc_port = 18443
+p2p_port = 18444
+
+[devnet.stacks_node]
+rpc_port = 20443
+p2p_port = 20444
+seed = "0x2a584d899fed1d24e26b524f202763c8ab30260167429f157f1c119f550fa6af5bbd4e26a355c1d329ea5e5fb09e5269a5c49a5d0f5c6e5b5b5b5b5b5b5b5b5b5"
+miner_seed = "0x2a584d899fed1d24e26b524f202763c8ab30260167429f157f1c119f550fa6af5bbd4e26a355c1d329ea5e5fb09e5269a5c49a5d0f5c6e5b5b5b5b5b5b5b5b5b5"
+local_peer_seed = "0x2a584d899fed1d24e26b524f202763c8ab30260167429f157f1c119f550fa6af5bbd4e26a355c1d329ea5e5fb09e5269a5c49a5d0f5c6e5b5b5b5b5b5b5b5b5b5"
+miner = true
+bootstrap_node = "029266faff4c8e0ca4f934f34996a96af481df94a89b0c9bd515f3536a95682ddc@127.0.0.1:20444"
+wait_time_for_microblocks = 10000

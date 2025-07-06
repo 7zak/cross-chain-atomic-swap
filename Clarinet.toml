@@ -1,0 +1,43 @@
+[project]
+name = "cross-chain-atomic-swap"
+version = "1.0.0"
+description = "A comprehensive cross-chain atomic swap protocol with privacy features, multi-signature support, and mixing pools"
+authors = ["Abdulrazak malik <hexchange001@gmail.com>"]
+license = "MIT"
+keywords = ["atomic-swap", "cross-chain", "privacy", "defi", "stacks"]
+
+[contracts.atomic-swap]
+path = "contracts/atomic-swap.clar"
+clarity_version = 2
+
+[contracts.atomic-swap-test]
+path = "contracts/test/atomic-swap-test.clar"
+clarity_version = 2
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+# Development network settings
+[[repl.sessions]]
+name = "development"
+deployment_fee_rate = 10
+
+# Testnet settings  
+[[repl.sessions]]
+name = "testnet"
+deployment_fee_rate = 10
+
+# Mainnet settings
+[[repl.sessions]]
+name = "mainnet" 
+deployment_fee_rate = 10
